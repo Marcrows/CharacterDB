@@ -1,0 +1,27 @@
+@using Models
+
+<EditForm Model="CharacterObject">
+    <div>
+        <label class="form-label">Name
+            <InputText class="form-control" aria-placeholder="Nombre" @bind-Value="CharacterObject.Name"/>
+        </label>
+    </div>
+
+    <div>
+        <label class="form-label">Gender
+            <InputText class="form-control" aria-placeholder="Gender" @bind-Value="CharacterObject.Gender"/>
+        </label>
+    </div>
+
+    <div>
+        <label class="form-label">Age
+            <InputNumber class="form-control" aria-placeholder="Age" @bind-Value="CharacterObject.Age"/>
+        </label>
+    </div>
+
+    <input type="button" class="btn btn-success" value="Save" />
+</EditForm>
+
+@code {
+    Character CharacterObject = new Character();
+}
